@@ -6,21 +6,21 @@ const pcards = [
   {
     name: "NC News",
     img: "logo_ncnews2",
-    link: "",
+    link: "/ncnews",
     descrip:
       "It illustrates how flex-grow works, weird quirks and all. ... If we apply display: flex.",
   },
   {
     name: "Wormplay",
     img: "logo_wormplay",
-    link: "",
+    link: "/wormplay",
     descrip:
       "Vitae scelerisque scelerisque scelerisque.\nEnim ligula venenatis.",
   },
   {
     name: "Portfolio",
     img: "logo_portfolio2",
-    link: "",
+    link: "/portfolio",
 
     descrip:
       "You have the possiblity to affect one or more flex-items to don't stretch the full height of the container. To affect all glex-items of it.",

@@ -1,8 +1,7 @@
-import styles from "./css/AboutMe.module.css";
 import React from "react";
-import image from "./images/person.png";
+import styles from "./css/XWormplay.module.css";
 
-const AboutMe = () => {
+const XWormplay = () => {
   return (
     <div className={styles.box}>
       <div className={styles.innerbox}>
@@ -37,16 +36,10 @@ const AboutMe = () => {
           <h5 className={styles.header}>Additional experience</h5>
           Python, Adobe Premiere Pro, Audacity
         </div>
-        <div className={styles.rightbox}>
-          <img
-            className={styles.image}
-            src={image}
-            alt="Face and shoulders of the site designer in question"
-          />
-        </div>
+        <div className={styles.rightbox}></div>
       </div>
     </div>
   );
 };
 
-export default AboutMe;
+export default XWormplay;

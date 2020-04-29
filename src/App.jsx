@@ -1,33 +1,23 @@
 import React from "react";
 import styles from "./css/App.module.css";
 import Navbar from "./Navbar";
-import Portfolio from "./Portfolio";
-import AboutMe from "./AboutMe";
+import Main from "./Main";
 import Footer from "./Footer";
+import XWormplay from "./XWormplay";
+import XNCNews from "./XNCNews";
+import XPortfolio from "./XPortfolio";
+import { Router, navigate } from "@reach/router";
 
 function App() {
   return (
     <div className={styles.App}>
       <Navbar />
-      {/* <header className={styles.App_header}></header> */}
-      <div className={styles.blurbContainer}>
-        <p className={styles.blurb}>
-          C Matus is a fast-learning and versatile junior software developer.
-          <br />
-          <br />
-          Recently graduated from Northcoders, a multi award winning coding
-          bootcamp.
-        </p>
-      </div>
-
-      <div className={styles.holderP} id="portfolio-holder">
-        <div className={styles.separator}></div>
-        <h1 className={styles.ptitle}>Portfolio</h1>
-        <Portfolio />
-      </div>
-      <div className={styles.holderA} id="aboutme-holder">
-        <AboutMe />
-      </div>
+      <Router>
+        <Main path="/" />
+        <XWormplay path="/wormplay" />
+        <XNCNews path="/ncnews" />
+        <XPortfolio path="/portfolio" />
+      </Router>
       <Footer />
     </div>
   );

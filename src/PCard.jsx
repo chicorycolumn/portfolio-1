@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./css/PCard.module.css";
+import { Link, navigate } from "@reach/router";
 
 const PCard = (props) => {
   let formattedDesc = [];
@@ -11,19 +12,21 @@ const PCard = (props) => {
   });
 
   return (
-    <div className={styles.card}>
-      <img
-        className={styles.logo}
-        src={require(`./images/${props.pcard.img}.png`)}
-        alt={`logo for ${props.pcard.name}`}
-      />
+    <Link to={props.pcard.link}>
+      <div className={styles.card}>
+        <img
+          className={styles.logo}
+          src={require(`./images/${props.pcard.img}.png`)}
+          alt={`logo for ${props.pcard.name}`}
+        />
 
-      <div className={styles.descripContainer}>
-        <div className={styles.descripSubcontainer}>
-          <p className={styles.description}>{formattedDesc}</p>
+        <div className={styles.descripContainer}>
+          <div className={styles.descripSubcontainer}>
+            <p className={styles.description}>{formattedDesc}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
