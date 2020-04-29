@@ -1,0 +1,54 @@
+.grid {
+  --repeat: auto-fit;
+}
+
+@media (min-width: calc(450px * 3)) {
+  .grid {
+    --repeat: 3;
+  }
+}
+
+.grid {
+  border: var(--bor) solid 2pt;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(
+    var(--repeat, auto-fit),
+    minmax(calc(450px * 1), 1fr)
+  );
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+}
+
+.box:nth-child(odd) {
+  background-color: var(--yin);
+}
+
+.box:nth-child(even) {
+  background-color: var(--yang);
+}
+
+@media (max-width: calc(449.67px * 3)) and (min-width: calc(305px * 3)) {
+  .box:nth-child(n) {
+    background-color: var(--yin);
+  }
+
+  #pbox1,
+  #pbox2,
+  #pbox5,
+  #pbox6,
+  #pbox9,
+  #pbox10,
+  #pbox13,
+  #pbox14,
+  #pbox17,
+  #pbox18,
+  #pbox21,
+  #pbox22 {
+    background-color: var(--yang);
+  }
+}

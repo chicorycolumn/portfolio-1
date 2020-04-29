@@ -1,0 +1,66 @@
+.navGrid {
+  position: fixed;
+  width: 100%;
+  background-color: var(--yin);
+  z-index: 2;
+  top: 0;
+  height: 50px;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: thistle; */
+  width: 600px;
+}
+
+.icon {
+  height: 30px;
+  /* width: 30px; */
+  position: relative;
+  top: 10px;
+}
+
+.iconText {
+  display: inline-block;
+  position: relative;
+  margin-top: 0px;
+  margin-right: 0px;
+  top: 0px;
+}
+
+.nameText {
+  font-size: 32px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.block {
+  /* border: yellow solid 2pt; */
+  height: 100%;
+  /* min-width: 120px; */
+}
+
+@media (max-width: 600px) {
+  .left {
+    /* background-color: tomato; */
+    width: 400px;
+  }
+
+  .icon {
+    /* height: 25px; */
+    align-self: center;
+    top: 0;
+  }
+
+  .iconText {
+    font-size: 10pt;
+    margin: 0 0 0 0;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
