@@ -10,6 +10,7 @@
 
 .grid {
   border: var(--bor) solid 2pt;
+  box-shadow: 0px 0px 2.5px var(--bor);
   width: 100%;
   height: auto;
   display: grid;

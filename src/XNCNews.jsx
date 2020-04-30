@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./css/XNCNews.module.css";
 
-const ref = [
-  { name: "computer screenshot of NC News 2", img: "nc_pc_2" },
-  { name: "computer screenshot of NC News", img: "nc_pc_1" },
-  { name: "phone screenshot of NC News 2", img: "nc_ph_2" },
-  { name: "phone screenshot of NC News", img: "nc_ph_1" },
-];
+const ref = {
+  pc2: { name: "computer screenshot of NC News 2", img: "nc_pc_2" },
+  pc1: { name: "computer screenshot of NC News", img: "nc_pc_1" },
+  ph2: { name: "phone screenshot of NC News 2", img: "nc_ph_2" },
+  ph1: { name: "phone screenshot of NC News", img: "nc_ph_1" },
+};
 
 const XNCNews = () => {
   return (
@@ -14,13 +14,13 @@ const XNCNews = () => {
       <div className={styles.leftie}>
         <img
           className={styles.pc}
-          src={require(`./images/screenshots/${ref[0].img}.png`)}
-          alt={ref[0].name}
+          src={require(`./images/screenshots/${ref.pc2.img}.png`)}
+          alt={ref.pc2.name}
         />
         <img
           className={styles.pc}
-          src={require(`./images/screenshots/${ref[1].img}.png`)}
-          alt={ref[1].name}
+          src={require(`./images/screenshots/${ref.pc1.img}.png`)}
+          alt={ref.pc1.name}
         />
       </div>
       <div className={styles.rightie}>
@@ -35,6 +35,47 @@ const XNCNews = () => {
               Articles can be created, voted on, and sorted by date or
               popularity. Users can register and log in, then create and comment
               on articles, with comments being voted on.
+              <div className={styles.linkBox}>
+                <div className={styles.linkHolder}>
+                  <img
+                    className={styles.linkIcon}
+                    alt="heroku logo"
+                    src={require(`./images/heroku_logo.png`)}
+                  />
+                  <p className={styles.linkSubheading}>Back End</p>
+                  <span className={styles.tooltiptext}>Heroku</span>
+                </div>
+
+                <div className={styles.linkHolder}>
+                  <span className={styles.tooltiptext}>Github</span>
+                  <img
+                    className={styles.linkIcon}
+                    alt="github logo"
+                    src={require(`./images/github_logo.png`)}
+                  />
+                  <p className={styles.linkSubheading}>Back End Code</p>
+                </div>
+
+                <div className={styles.linkHolder}>
+                  <span className={styles.tooltiptext}>Netlify</span>
+                  <img
+                    className={styles.linkIcon}
+                    alt="netlify logo"
+                    src={require(`./images/netlify_logo.png`)}
+                  />
+                  <p className={styles.linkSubheading}>Front End</p>
+                </div>
+
+                <div className={styles.linkHolder}>
+                  <span className={styles.tooltiptext}>Github</span>
+                  <img
+                    className={styles.linkIcon}
+                    alt="github logo"
+                    src={require(`./images/github_logo.png`)}
+                  />
+                  <p className={styles.linkSubheading}>Front End Code</p>
+                </div>
+              </div>
             </div>
 
             <div className={styles.specs}>
@@ -56,13 +97,13 @@ const XNCNews = () => {
         <div className={styles.phHolder}>
           <img
             className={styles.ph}
-            src={require(`./images/screenshots/${ref[2].img}.png`)}
-            alt={ref[2].name}
+            src={require(`./images/screenshots/${ref.ph2.img}.png`)}
+            alt={ref.ph2.name}
           />
           <img
             className={styles.ph}
-            src={require(`./images/screenshots/${ref[3].img}.png`)}
-            alt={ref[3].name}
+            src={require(`./images/screenshots/${ref.ph1.img}.png`)}
+            alt={ref.ph1.name}
           />
         </div>
       </div>

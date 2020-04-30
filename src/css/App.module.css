@@ -2,6 +2,7 @@
   --yin: skyblue; /*Darker main color*/
   --yang: aqua; /*Lighter main color*/
   --bor: blue; /*Darkest, borders and text*/
+  --text: #0000e6; /*Darker than bor*/
   --bg: lightcyan; /*Background neutral*/
 }
 

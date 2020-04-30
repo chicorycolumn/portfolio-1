@@ -1,5 +1,5 @@
 .blurb {
-  color: var(--bor);
+  color: var(--text);
   /* font-weight: bold; */
   font-style: italic;
   margin-bottom: 100px;
@@ -35,6 +35,7 @@
 }
 
 .ptitle {
+  color: var(--text);
 }
 
 .separator {

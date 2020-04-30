@@ -35,7 +35,8 @@
   margin-right: 5%;
   /* margin-left: 5%; */
 
-  border: 5px solid var(--bor);
+  border: 1px dotted var(--bor);
+  box-shadow: 0px 0px 2.5px var(--bor);
   border-radius: 4px;
   padding: 0px;
   /* width: 150px; */
@@ -84,6 +85,7 @@
     height: auto;
     width: 50px;
     margin-top: 20px;
+    margin-right: 0;
   }
 }
 

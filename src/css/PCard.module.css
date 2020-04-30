@@ -52,7 +52,7 @@
   bottom: 0;
   top: 10;
   text-align: center;
-  color: var(--bor);
+  color: var(--text);
 }
 
 .card:hover .logo {

@@ -3,15 +3,26 @@
   width: 100%;
   background-color: var(--yin);
   z-index: 2;
-  top: 0;
-  height: 50px;
+  top: -2px;
+  height: 55px;
+  box-shadow: 0px 0px 2.5px var(--bor);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .left {
   display: flex;
   justify-content: space-between;
   /* background-color: thistle; */
+  top: 4px;
+  position: relative;
   width: 600px;
+  /* background-color: hotpink; */
+}
+
+.right {
+  /* background-color: yellow; */
 }
 
 .icon {
@@ -41,6 +52,44 @@
   /* min-width: 120px; */
 }
 
+.trigger {
+  /* position: fixed; */
+  /* left: 0.5px; */
+  width: auto;
+  height: 100%;
+  /* background-color: white; */
+  /* color: indigo; */
+  font-weight: bold;
+  /* border: rebeccapurple solid 1pt; */
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 91px;
+  cursor: pointer;
+}
+
+.buttonA {
+  background-color: var(--soft-lilac1);
+}
+
+.buttonE {
+  background-color: var(--soft-lilac2);
+}
+
+.dropButtons {
+  border: black solid 1pt;
+  border-top: none;
+  width: 92.5px;
+  text-align: center;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .left {
     /* background-color: tomato; */
@@ -62,5 +111,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .left {
+    /* background-color: tomato; */
+    width: 98%;
+    justify-content: space-around;
   }
 }
