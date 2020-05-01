@@ -9,20 +9,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* border: black dotted 2pt; */
 }
 
 .left {
   display: flex;
   justify-content: space-between;
-  /* background-color: thistle; */
   top: 4px;
   position: relative;
   width: 600px;
-  /* background-color: hotpink; */
+  /* background-color: thistle; */
 }
 
 .right {
+  display: flex;
+  justify-content: center;
+  top: 4px;
+  position: relative;
+  /* width: 600px; */
   /* background-color: yellow; */
+  margin-right: 5px;
+  margin-left: 5px;
+  min-width: 90px;
 }
 
 .icon {
@@ -53,53 +61,101 @@
 }
 
 .trigger {
-  /* position: fixed; */
-  /* left: 0.5px; */
-  width: auto;
-  height: 100%;
-  /* background-color: white; */
-  /* color: indigo; */
-  font-weight: bold;
-  /* border: rebeccapurple solid 1pt; */
-  font-size: 12px;
   cursor: pointer;
 }
 
 .dropdown {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: fixed;
-  top: 91px;
+  top: 53.5px;
+  left: 0;
   cursor: pointer;
+  width: 100%;
+  animation-duration: 0.5s;
+  animation-name: slidein;
 }
 
-.buttonA {
-  background-color: var(--soft-lilac1);
+/* .buttonAtlantic {
+  background-color: ;
+}
+
+.buttonElectric {
+  background-color: ;
+}
+
+.buttonPhotosynthetic {
+  background-color: ;
+}
+
+.buttonHellenic {
+  background-color: ;
+} */
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    /* width: 300%; */
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* .buttonA {
+  background-color: skyblue;
 }
 
 .buttonE {
-  background-color: var(--soft-lilac2);
-}
+  background-color: yellow;
+} */
 
 .dropButtons {
-  border: black solid 1pt;
+  border: none;
+  box-shadow: 2.5px 2.5px 5px black;
   border-top: none;
-  width: 92.5px;
+  width: 100%;
+  height: 40px;
   text-align: center;
   margin-left: 0px;
   cursor: pointer;
+  /* background-color: greenyellow; */
+}
+
+.Wordschangetheme {
+  display: inline-block;
+}
+
+.Wordstheme {
+  display: none;
+}
+
+@media (max-width: 775px) {
+  .Wordschangetheme {
+    display: none;
+  }
+  .Wordstheme {
+    display: inline-block;
+  }
 }
 
 @media (max-width: 600px) {
   .left {
     /* background-color: tomato; */
     width: 400px;
+    top: 0px;
+  }
+  .right {
+    min-width: 0px;
+    top: 0px;
   }
 
   .icon {
     /* height: 25px; */
     align-self: center;
-    top: 0;
+    top: 5px;
   }
 
   .iconText {
@@ -117,7 +173,23 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .left {
     /* background-color: tomato; */
-    width: 98%;
+    width: 85%;
     justify-content: space-around;
+  }
+  .Wordschangetheme {
+    display: none;
+  }
+
+  .Wordstheme {
+    display: inline-block;
+  }
+  .left {
+    margin-left: 4px;
+  }
+  .right {
+    margin-right: 8px;
+  }
+  .iconText {
+    font-size: 9pt;
   }
 }

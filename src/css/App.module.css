@@ -17,6 +17,18 @@
   width: auto;
   height: auto;
   min-height: 87vh;
-  padding-top: 90px;
+  /* padding-top: 90px; */
   padding-bottom: 1px;
+}
+
+.topAnchor {
+  margin: 0;
+  height: 1px;
+  /* background-color: red; */
+}
+
+.topPadding {
+  height: 89px;
+  margin: 0;
+  /* background-color: khaki; */
 }

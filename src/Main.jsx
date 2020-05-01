@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./css/Main.module.css";
+import appStyles from "./css/App.module.css";
 import Portfolio from "./Portfolio";
 import AboutMe from "./AboutMe";
 import { Router, navigate } from "@reach/router";
@@ -7,6 +8,8 @@ import { Router, navigate } from "@reach/router";
 function Main() {
   return (
     <>
+      <div className={appStyles.topAnchor} id="topAnchor"></div>
+      <div className={appStyles.topPadding} id="topPadding"></div>
       <div className={styles.blurbContainer}>
         <p className={styles.blurb}>
           C Matus is a fast-learning and versatile junior software developer.

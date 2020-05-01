@@ -11,7 +11,7 @@
 .grid {
   border: var(--bor) solid 2pt;
   box-shadow: 0px 0px 2.5px var(--bor);
-  width: 100%;
+  width: 99.5%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(
@@ -33,7 +33,7 @@
   background-color: var(--yang);
 }
 
-@media (max-width: calc(449.67px * 3)) and (min-width: calc(305px * 3)) {
+@media (max-width: calc(449.67px * 3)) and (min-width: calc(306.1px * 3)) {
   .box:nth-child(n) {
     background-color: var(--yin);
   }
@@ -51,5 +51,19 @@
   #pbox21,
   #pbox22 {
     background-color: var(--yang);
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .grid {
+    border: var(--bor) solid 2pt;
+    box-shadow: 0px 0px 2.5px var(--bor);
+    width: 98%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(
+      var(--repeat, auto-fit),
+      minmax(calc(300px * 1), 1fr)
+    );
   }
 }

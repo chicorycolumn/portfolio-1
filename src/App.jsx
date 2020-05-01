@@ -10,7 +10,7 @@ import { Router, navigate } from "@reach/router";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className={styles.App} id="App">
       <Navbar />
       <Router>
         <Main path="/" />

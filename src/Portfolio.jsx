@@ -8,22 +8,21 @@ const pcards = [
     img: "logo_ncnews2",
     link: "/ncnews",
     descrip:
-      "It illustrates how flex-grow works, weird quirks and all. ... If we apply display: flex.",
+      "Fullstack Reddit-style news aggregation board.\nBuilt with RESTful API and SQL database.",
   },
   {
     name: "Wormplay",
     img: "logo_wormplay",
     link: "/wormplay",
     descrip:
-      "Vitae scelerisque scelerisque scelerisque.\nEnim ligula venenatis.",
+      "Phaser-based online game with facial-recognition.\nUses Socket.io for realtime player interactions",
   },
   {
     name: "Portfolio",
     img: "logo_portfolio2",
     link: "/portfolio",
 
-    descrip:
-      "You have the possiblity to affect one or more flex-items to don't stretch the full height of the container. To affect all glex-items of it.",
+    descrip: "Fully responsive React-based website.",
   },
 
   {
