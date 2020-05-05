@@ -1,6 +1,6 @@
 import styles from "./css/AboutMe.module.css";
 import React from "react";
-import image from "./images/person.png";
+import image from "./images/c_matus_photo.jpg";
 
 const AboutMe = () => {
   return (

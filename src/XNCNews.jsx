@@ -3,10 +3,38 @@ import styles from "./css/XNCNews.module.css";
 import appStyles from "./css/App.module.css";
 
 const ref = {
-  pc2: { name: "computer screenshot of NC News 2", img: "nc_pc_2" },
-  pc1: { name: "computer screenshot of NC News", img: "nc_pc_1" },
-  ph2: { name: "phone screenshot of NC News 2", img: "nc_ph_2" },
-  ph1: { name: "phone screenshot of NC News", img: "nc_ph_1" },
+  title: "NC News",
+
+  screens: {
+    pc2: { name: "computer screenshot of NC News 2", img: "nc_pc_2" },
+    pc1: { name: "computer screenshot of NC News", img: "nc_pc_1" },
+    ph2: { name: "phone screenshot of NC News 2", img: "nc_ph_2" },
+    ph1: { name: "phone screenshot of NC News", img: "nc_ph_1" },
+  },
+
+  links: [
+    {
+      label: "Back End",
+      site: "Heroku",
+      url: "https://nc-news-c-matus.herokuapp.com/api/",
+    },
+    {
+      label: "Back End Code",
+      site: "Github",
+      url: "https://github.com/chicorycolumn/be-nc-news",
+    },
+    {
+      label: "Front End",
+      site: "Netlify",
+      url: "https://purpleprose.netlify.com/",
+      primary: true,
+    },
+    {
+      label: "Front End Code",
+      site: "Github",
+      url: "https://github.com/chicorycolumn/fe-nc-news",
+    },
+  ],
 };
 
 const XNCNews = () => {
@@ -19,20 +47,31 @@ const XNCNews = () => {
         <div className={styles.leftie}>
           <img
             className={styles.pc}
-            src={require(`./images/screenshots/${ref.pc2.img}.png`)}
-            alt={ref.pc2.name}
+            src={require(`./images/screenshots/${ref.screens.pc2.img}.png`)}
+            alt={ref.screens.pc2.name}
           />
           <img
             className={styles.pc}
-            src={require(`./images/screenshots/${ref.pc1.img}.png`)}
-            alt={ref.pc1.name}
+            src={require(`./images/screenshots/${ref.screens.pc1.img}.png`)}
+            alt={ref.screens.pc1.name}
           />
         </div>
         <div className={styles.rightie}>
           <div className={styles.box}>
             <div className={styles.innerbox}>
               <div className={styles.text}>
-                <p className={styles.title}>NC News</p>
+                <div
+                  className={styles.title}
+                  onClick={() => {
+                    window.open(
+                      ref.links.filter((link) => link.primary)[0].url,
+                      "_blank"
+                    );
+                  }}
+                >
+                  {ref.title}
+                  <span className={styles.tooltiptext2}>Visit</span>
+                </div>
                 <br />
                 A fullstack Reddit style news aggregation board.
                 <br />
@@ -41,45 +80,24 @@ const XNCNews = () => {
                 popularity. Users can register and log in, then create and
                 comment on articles, with comments being voted on.
                 <div className={styles.linkBox}>
-                  <div className={styles.linkHolder}>
-                    <img
-                      className={styles.linkIcon}
-                      alt="heroku logo"
-                      src={require(`./images/heroku_logo.png`)}
-                    />
-                    <p className={styles.linkSubheading}>Back End</p>
-                    <span className={styles.tooltiptext}>Heroku</span>
-                  </div>
-
-                  <div className={styles.linkHolder}>
-                    <span className={styles.tooltiptext}>Github</span>
-                    <img
-                      className={styles.linkIcon}
-                      alt="github logo"
-                      src={require(`./images/github_logo.png`)}
-                    />
-                    <p className={styles.linkSubheading}>Back End Code</p>
-                  </div>
-
-                  <div className={styles.linkHolder}>
-                    <span className={styles.tooltiptext}>Netlify</span>
-                    <img
-                      className={styles.linkIcon}
-                      alt="netlify logo"
-                      src={require(`./images/netlify_logo.png`)}
-                    />
-                    <p className={styles.linkSubheading}>Front End</p>
-                  </div>
-
-                  <div className={styles.linkHolder}>
-                    <span className={styles.tooltiptext}>Github</span>
-                    <img
-                      className={styles.linkIcon}
-                      alt="github logo"
-                      src={require(`./images/github_logo.png`)}
-                    />
-                    <p className={styles.linkSubheading}>Front End Code</p>
-                  </div>
+                  {ref.links.map((link) => {
+                    return (
+                      <div
+                        className={styles.linkHolder}
+                        onClick={() => {
+                          window.open(link.url, "_blank");
+                        }}
+                      >
+                        <img
+                          className={styles.linkIcon}
+                          alt={`${link.site} logo`}
+                          src={require(`./images/${link.site.toLowerCase()}_logo.png`)}
+                        />
+                        <p className={styles.linkSubheading}>{link.label}</p>
+                        <span className={styles.tooltiptext}>{link.site}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -102,13 +120,13 @@ const XNCNews = () => {
           <div className={styles.phHolder}>
             <img
               className={styles.ph}
-              src={require(`./images/screenshots/${ref.ph2.img}.png`)}
-              alt={ref.ph2.name}
+              src={require(`./images/screenshots/${ref.screens.ph2.img}.png`)}
+              alt={ref.screens.ph2.name}
             />
             <img
               className={styles.ph}
-              src={require(`./images/screenshots/${ref.ph1.img}.png`)}
-              alt={ref.ph1.name}
+              src={require(`./images/screenshots/${ref.screens.ph1.img}.png`)}
+              alt={ref.screens.ph1.name}
             />
           </div>
         </div>
