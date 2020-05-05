@@ -4,6 +4,7 @@
   --bor: blue; /*Darkest, borders and text*/
   --text: #0000e6; /*Darker than bor*/
   --bg: lightcyan; /*Background neutral*/
+  --monochrometext: black;
 }
 
 .App {

@@ -3,10 +3,10 @@ import styles from "./css/XPortfolio.module.css";
 import appStyles from "./css/App.module.css";
 
 const ref = {
-  pc2: { name: "computer screenshot of NC News 2", img: "nc_pc_2" },
-  pc1: { name: "computer screenshot of NC News", img: "nc_pc_1" },
-  ph2: { name: "phone screenshot of NC News 2", img: "nc_ph_2" },
-  ph1: { name: "phone screenshot of NC News", img: "nc_ph_1" },
+  pc2: { name: "computer screenshot of Portfolio 2", img: "portfolio_pc_2" },
+  pc1: { name: "computer screenshot of Portfolio", img: "portfolio_pc_1" },
+  ph2: { name: "phone screenshot of Portfolio 2", img: "portfolio_ph_2" },
+  ph1: { name: "phone screenshot of Portfolio", img: "portfolio_ph_1" },
 };
 
 const XPortfolio = () => {

@@ -4,29 +4,45 @@ import { Link, navigate } from "@reach/router";
 
 const PCard = (props) => {
   let formattedDesc = [];
-  props.pcard.descrip.split("\n").forEach((x, index) => {
-    formattedDesc.push(x);
-    if (index !== props.pcard.descrip.length - 1) {
-      formattedDesc.push(<br />);
+  if (props.pcard) {
+    if (props.pcard.name) {
+      props.pcard.descrip.split("\n").forEach((x, index) => {
+        formattedDesc.push(x);
+        if (index !== props.pcard.descrip.length - 1) {
+          formattedDesc.push(<br />);
+        }
+      });
     }
-  });
+  }
 
-  return (
-    <Link to={props.pcard.link}>
-      <div className={styles.card}>
+  return props.pcard ? (
+    props.pcard.isCoda ? (
+      <div className={styles.cardCoda}>
         <img
-          className={styles.logo}
+          className={styles.logoCoda}
           src={require(`./images/${props.pcard.img}.png`)}
-          alt={`logo for ${props.pcard.name}`}
+          alt={"abstract swirls"}
         />
+      </div>
+    ) : (
+      <Link to={props.pcard.link}>
+        <div className={styles.card}>
+          <img
+            className={styles.logo}
+            src={require(`./images/${props.pcard.img}.png`)}
+            alt={`logo for ${props.pcard.name}`}
+          />
 
-        <div className={styles.descripContainer}>
-          <div className={styles.descripSubcontainer}>
-            <p className={styles.description}>{formattedDesc}</p>
+          <div className={styles.descripContainer}>
+            <div className={styles.descripSubcontainer}>
+              <p className={styles.description}>{formattedDesc}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    )
+  ) : (
+    <div className={styles.card}></div>
   );
 };
 

@@ -2,5 +2,34 @@
   margin-top: 100px;
   background-color: black;
   color: white;
-  height: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text {
+  /* padding-top: 25px;
+  padding-bottom: 5px; */
+  margin: 0;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.emailmeHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.emailme {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  margin: 0;
+  /* margin-top: 10px; */
+}
+
+.emailmeIcon {
+  height: 30px;
 }

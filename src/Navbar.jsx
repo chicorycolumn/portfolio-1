@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./css/Navbar.module.css";
 import { useLocation } from "react-router-dom";
+import { navigate } from "@reach/router";
 
 const refObj = [
   {
@@ -13,7 +14,11 @@ const refObj = [
     text: "About",
     onclick: "aboutme-holder",
   },
-  { label: "letter", text: "Contact" },
+  {
+    label: "letter",
+    text: "Contact",
+    onclick: "mailto:c.matus.contact@gmail.com",
+  },
   {
     label: "github",
     text: "Github",
@@ -29,20 +34,23 @@ const colours = {
     bor: "#0000ff",
     text: "#0000e6",
     bg: "#e0ffff",
+    monochrometext: "#000000",
   },
   Electric: {
     yin: "#ffc966",
     yang: "#ffff66",
-    bor: "#ffa500",
+    bor: "#000000",
     text: "#332100",
     bg: "#fcfce8",
+    monochrometext: "#000000",
   },
-  Photosynthetic: {
+  Phytic: {
     yin: "#90EE90",
     yang: "#d3f8d3",
     bor: "#1cb01c",
     text: "#0e580e",
     bg: "#e9fce9",
+    monochrometext: "#000000",
   },
   Hellenic: {
     yin: "#D3D3D3",
@@ -50,6 +58,23 @@ const colours = {
     bor: "#000000",
     text: "#000000",
     bg: "#F5F5F5",
+    monochrometext: "#000000",
+  },
+  Agaric: {
+    yin: "#ec4646",
+    yang: "#f5a3a3",
+    bor: "#fad1d1",
+    text: "#ffffff",
+    bg: "#333333",
+    monochrometext: "#000000",
+  },
+  Cosmic: {
+    yin: "#1a53ff",
+    yang: "#0033cc",
+    bor: "#ffffff",
+    text: "#ffffff",
+    bg: "#001a66",
+    monochrometext: "#ffffff",
   },
 };
 
@@ -59,6 +84,12 @@ class Navbar extends React.Component {
   };
 
   toggleDropdown = () => {
+    if (this.state.isShowing) {
+      document.removeEventListener("click", this.toggleDropdown);
+    } else {
+      document.addEventListener("click", this.toggleDropdown);
+    }
+
     this.setState((prevState) => {
       return { isShowing: !prevState.isShowing };
     });
@@ -81,18 +112,18 @@ class Navbar extends React.Component {
             <span
               className={styles.block}
               onClick={() => {
-                // let location = useLocation();
-                console.log(this.props);
-
                 if (ref.onclick) {
-                  if (/^http/.test(ref.onclick)) {
-                    window.open(ref.onclick, "_blank");
+                  if (/^http|^mailto/.test(ref.onclick)) {
+                    window.open(ref.onclick, "_blank"); //************************ */
                   } else {
-                    let el = document.getElementById(ref.onclick);
-                    el.scrollIntoView({
-                      behavior: "smooth",
-                    });
-                    el.scrollTop += 500;
+                    navigate("/");
+                    setTimeout(() => {
+                      let el = document.getElementById(ref.onclick);
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                      el.scrollTop += 500;
+                    }, 100);
                   }
                 }
               }}
@@ -129,7 +160,10 @@ class Navbar extends React.Component {
               {Object.keys(colours).map((label) => {
                 return (
                   <button
-                    style={{ backgroundColor: colours[label].yang }}
+                    style={{
+                      backgroundColor: colours[label].yang,
+                      color: label === "Cosmic" ? "white" : "black",
+                    }}
                     id={`button${label}`}
                     className={styles.dropButtons}
                     onClick={() => {

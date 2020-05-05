@@ -36,6 +36,7 @@
 
 .ptitle {
   color: var(--text);
+  margin-top: 5px;
 }
 
 .separator {

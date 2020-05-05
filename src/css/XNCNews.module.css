@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* border: magenta dotted 2pt; */
+  width: 98%;
 }
 
 .leftie {
@@ -68,6 +68,7 @@
   /* border: crimson solid 2pt; */
   background-color: var(--yang);
   border-bottom: var(--bor) solid 0.5pt;
+  color: var(--monochrometext);
 }
 
 .specs {
@@ -77,6 +78,7 @@
   /* border: lawngreen solid 2pt; */
   background-color: var(--yin);
   padding-bottom: 20px;
+  color: var(--monochrometext);
 }
 
 .header {
@@ -166,7 +168,7 @@
 
 @media screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .pc {
-    width: 350px;
+    width: 325px;
     height: auto;
   }
 
@@ -183,5 +185,15 @@
 
   .box {
     width: 300px;
+  }
+
+  .text {
+    font-size: 10pt;
+  }
+  .specs {
+    font-size: 10pt;
+  }
+  .title {
+    font-size: 24px;
   }
 }

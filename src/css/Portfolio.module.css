@@ -9,7 +9,8 @@
 }
 
 .grid {
-  border: var(--bor) solid 2pt;
+  background-color: var(--bor);
+  border: var(--bor) solid 1pt;
   box-shadow: 0px 0px 2.5px var(--bor);
   width: 99.5%;
   height: auto;
@@ -65,5 +66,8 @@
       var(--repeat, auto-fit),
       minmax(calc(300px * 1), 1fr)
     );
+  }
+  .box {
+    /* height: 300px; */
   }
 }

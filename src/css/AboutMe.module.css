@@ -53,6 +53,7 @@
   margin-right: 15px; */
   /* border: crimson solid 2pt; */
   background-color: var(--yang);
+  color: var(--monochrometext);
   border-bottom: var(--bor) solid 0.5pt;
 }
 
@@ -63,6 +64,7 @@
   /* border: lawngreen solid 2pt; */
   background-color: var(--yin);
   padding-bottom: 20px;
+  color: var(--monochrometext);
 }
 
 .header {
@@ -98,5 +100,11 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .box {
     width: 75%;
+  }
+  .text {
+    font-size: 10pt;
+  }
+  .specs {
+    font-size: 10pt;
   }
 }
