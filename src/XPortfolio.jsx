@@ -6,8 +6,8 @@ const ref = {
   title: "Portfolio",
 
   screens: {
-    pc2: { name: "computer screenshot of Portfolio 2", img: "portfolio_pc_2" },
-    pc1: { name: "computer screenshot of Portfolio", img: "portfolio_pc_1" },
+    pc2: { name: "computer screenshot of Portfolio 2", img: "portfolio_pc_1" },
+    pc1: { name: "computer screenshot of Portfolio", img: "portfolio_pc_2" },
     ph2: { name: "phone screenshot of Portfolio 2", img: "portfolio_ph_2" },
     ph1: { name: "phone screenshot of Portfolio", img: "portfolio_ph_1" },
   },
@@ -16,13 +16,13 @@ const ref = {
     {
       label: "Hosting",
       site: "Netlify",
-      url: "https://purpleprose.netlify.com/",
+      url: "https://c-m-portfolio.netlify.app",
       primary: true,
     },
     {
       label: "Code",
       site: "Github",
-      url: "https://github.com/chicorycolumn/fe-nc-news",
+      url: "https://github.com/chicorycolumn/portfolio-1",
     },
   ],
 };

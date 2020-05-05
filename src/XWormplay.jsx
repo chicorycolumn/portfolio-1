@@ -24,7 +24,7 @@ const ref = {
     {
       label: "Front End",
       site: "Netlify",
-      url: "https://github.com/chicorycolumn/wormplay-FE",
+      url: "https://wormplay.netlify.app/",
       primary: true,
     },
     {
